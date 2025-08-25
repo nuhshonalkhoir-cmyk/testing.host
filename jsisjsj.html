@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameTopUp - Top Up Game Online Terpercaya</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #4f46e5;
+            --secondary: #10b981;
+            --accent: #f59e0b;
+            --dark: #1f2937;
+            --light: #f9fafb;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .hero-pattern {
+            background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.1) 1px, transparent 0);
+            background-size: 20px 20px;
+        }
+        
+        .loading {
+            display: none;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body class="min-h-screen text-white">
+    <!-- Header -->
+    <header class="bg-white/10 backdrop-blur-md py-4 px-6 fixed w-full top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-lg flex items-center justify-center">
+                    <i class="fas fa-gamepad text-white text-xl"></i>
+                </div>
+                <h1 class="text-2xl font-bold text-white">GameTopUp</h1>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="hover:text-yellow-300 transition-colors">Beranda</a>
+                <a href="#games" class="hover:text-yellow-300 transition-colors">Game</a>
+                <a href="#howto" class="hover:text-yellow-300 transition-colors">Cara Top Up</a>
+                <a href="#testimonial" class="hover:text-yellow-300 transition-colors">Testimoni</a>
+            </nav>
+            
+            <div class="flex items-center space-x-4">
+                <button class="bg-indigo-600 hover:bg-indigo-700 px-4 py-2 rounded-lg transition-colors">
+                    <i class="fas fa-user mr-2"></i>Login
+                </button>
+                <button class="md:hidden">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 px-6 hero-pattern">
+        <div class="container mx-auto text-center">
+            <h2 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                Top Up Game <span class="text-yellow-300">Mudah</span> & 
+                <span class="text-green-300">Cepat</span>
+            </h2>
+            <p class="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto">
+                Isi saldo game favoritmu dengan proses instan dan aman. Dukung perjalanan gamingmu dengan top up yang terpercaya!
+            </p>
+            
+            <div class="flex flex-col md:flex-row justify-center gap-6 mb-12">
+                <div class="bg-white/10 p-6 rounded-xl backdrop-blur-sm">
+                    <i class="fas fa-bolt text-yellow-300 text-3xl mb-3"></i>
+                    <h3 class="font-semibold text-lg">Proses Instan</h3>
+                    <p class="text-sm">Hanya 1-3 menit setelah pembayaran</p>
+                </div>
+                <div class="bg-white/10 p-6 rounded-xl backdrop-blur-sm">
+                    <i class="fas fa-shield-alt text-green-300 text-3xl mb-3"></i>
+                    <h3 class="font-semibold text-lg">100% Aman</h3>
+                    <p class="text-sm">Transaksi terenkripsi dan terjamin</p>
+                </div>
+                <div class="bg-white/10 p-6 rounded-xl backdrop-blur-sm">
+                    <i class="fas fa-headset text-blue-300 text-3xl mb-3"></i>
+                    <h3 class="font-semibold text-lg">Support 24/7</h3>
+                    <p class="text-sm">Customer service siap membantu</p>
+                </div>
+            </div>
+
+            <a href="#games" class="bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-white font-bold py-4 px-8 rounded-full text-lg transition-all transform hover:scale-105 inline-flex items-center">
+                <i class="fas fa-arrow-down mr-2"></i>Top Up Sekarang
+            </a>
+        </div>
+    </section>
+
+    <!-- Popular Games Section -->
+    <section id="games" class="py-20 px-6 bg-gray-900">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-4">Game Populer</h2>
+            <p class="text-gray-400 text-center mb-12 max-w-2xl mx-auto">Pilih game favoritmu dan lakukan top up dengan mudah. Berbagai pilihan nominal tersedia untuk kebutuhan gamingmu.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <!-- Game 1 -->
+                <div class="bg-gray-800 rounded-xl overflow-hidden card-hover">
+                    <div class="h-48 relative">
+                        <img src="https://placehold.co/400x300" alt="Mobile Legends Bang Bang game artwork showing epic battle scene with heroes and special effects" class="w-full h-full object-cover">
+                        <div class="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                            Popular
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Mobile Legends</h3>
+                        <p class="text-gray-400 mb-4">Top up Diamond dengan harga terbaik</p>
+                        <div class="grid grid-cols-2 gap-2 mb-4">
+                            <div class="bg-gray-700 px-3 py-2 rounded text-center hover:bg-gray-600 cursor-pointer">86 💎</div>
+                            <div class="bg-gray-700 px-3 py-2 rounded text-center hover:bg-gray-600 cursor-pointer">172 💎</div>
+                            <div class="bg-gray-700 px-3 py-2 rounded text-center hover:bg-gray-600 cursor-pointer">257 💎</div>
+                            <div class="bg-gray-700 px-3 py-2 rounded text-center hover:bg-gray-600 cursor-pointer">344 💎</div>
+                        </div>
+                        <button class="w-full bg-indigo-600 hover:bg-indigo-700 py-2 rounded-lg transition-colors">
+                            Top Up Sekarang
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Game 2 -->
+                <div class="bg-gray-800 rounded-xl overflow-hidden card-hover">
+                    <div class="h-48">
+                        <img src="https://placehold.co/400x300" alt="Free Fire battle royale scene with characters in action poses and explosive background" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Free Fire</h3>
+                        <p class="text-gray-400 mb-4">Isi Diamond FF dengan cepat</p>
+                        <div class="grid grid-cols-2 gap-2 mb-4">
+                            <div class="bg-gray-700 px-3 py-2 rounded text-center hover:bg-gray-600 cursor-pointer">70 💎</div>
+                            <div class="bg-gray-700 px-3 py-2 rounded text-center hover:bg-gray-600 cursor-pointer">140 💎</div>
+                            <div class="bg-gray-700 px-3 py-2 rounded text-center hover:bg-gray-600 cursor-pointer">210 💎</div>
+                            <div class="bg-gray-700 px-3 py-2 rounded text-center hover:bg-gray-600 cursor-pointer">355 💎</div>
+                        </div>
+                        <button class="w-full bg-indigo-600 hover:bg-indigo-700 py-2 rounded-lg transition-colors">
+                            Top Up Sekarang
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Game 3 -->
+                <div class="bg-gray-800 rounded-xl overflow-hidden card-hover">
+                    <div class="h-48">
+                        <img src="https://placehold.co/400x300" alt="PUBG Mobile gameplay screenshot showing realistic graphics and intense battle scene" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">PUBG Mobile</h3>
+                        <p class="text-gray-400 mb-4">UC PUBG dengan harga spesial</p>
+                        <div class="grid grid-cols-2 gap-2 mb-4">
+                            <div class="bg-gray-700 px-3 py-2 rounded text-center hover:bg-gray-600 cursor-pointer">60 UC</div>
+                            <div class="bg-gray-700 px-3 py-2 rounded text-center hover:bg-gray-600 cursor-pointer">325 UC</div>
+                            <div class="bg-gray-700 px-3 py-2 rounded text-center hover:bg-gray-600 cursor-pointer">660 UC</div>
+                            <div class="bg-gray-700 px-3 py-2 rounded text-center hover:bg-gray-600 cursor-pointer">1800 UC</div>
+                        </div>
+                        <button class="w-full bg-indigo-600 hover:bg-indigo-700 py-2 rounded-lg transition-colors">
+                            Top Up Sekarang
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Game 4 -->
+                <div class="bg-gray-800 rounded-xl overflow-hidden card-hover">
+                    <div class="h-48">
+                        <img src="https://placehold.co/400x300" alt="Genshin Impact fantasy world with anime-style characters exploring beautiful landscapes" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Genshin Impact</h3>
+                        <p class="text-gray-400 mb-4">Genesis Crystal untuk gacha</p>
+                        <div class="grid grid-cols-2 gap-2 mb-4">
+                            <div class="bg-gray-700 px-3 py-2 rounded text-center hover:bg-gray-600 cursor-pointer">60 GC</div>
+                            <div class="bg-gray-700 px-3 py-2 rounded text-center hover:bg-gray-600 cursor-pointer">330 GC</div>
+                            <div class="bg-gray-700 px-3 py-2 rounded text-center hover:bg-gray-600 cursor-pointer">1090 GC</div>
+                            <div class="bg-gray-700 px-3 py-2 rounded text-center hover:bg-gray-600 cursor-pointer">2240 GC</div>
+                        </div>
+                        <button class="w-full bg-indigo-600 hover:bg-indigo-700 py-2 rounded-lg transition-colors">
+                            Top Up Sekarang
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Top Up Section -->
+    <section id="howto" class="py-20 px-6 bg-gray-800">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-4">Cara Top Up</h2>
+            <p class="text-gray-400 text-center mb-12 max-w-2xl mx-auto">Proses top up sangat mudah dan cepat. Ikuti 4 langkah sederhana berikut untuk mengisi saldo game kamu.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                        1
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Pilih Game</h3>
+                    <p class="text-gray-400">Pilih game yang ingin kamu top up dari daftar game populer</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                        2
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Masukkan ID</h3>
+                    <p class="text-gray-400">Masukkan User ID dan server game kamu dengan benar</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                        3
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Pilih Pembayaran</h3>
+                    <p class="text-gray-400">Pilih metode pembayaran yang paling nyaman untuk kamu</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                        4
+                        
